@@ -1,5 +1,5 @@
 from tkinter import *
-from datetime import *
+from datetime import * #zvezdica pomeni 'import all'
 
 class ITM():
     
@@ -62,7 +62,7 @@ class ITM():
         self.lista.insert(0, str(date.today()) + " ~ " + str(self.itm.get()) + "  [ " + str(self.teza.get()) + " kg ... " + str(self.visina.get()) + " m ]")
         self.sez_liste += [str(date.today()) + " ~ " + str(self.itm.get()) + "  [ " + str(self.teza.get()) + " kg ... " + str(self.visina.get()) + " m ]"]
         
-        if self.a.get() == 1: # 1 so ženske 
+        if self.a.get() == 1: #1 so ženske 
             if self.itm.get() <= 18.4:
                 self.stanje.set("prenizka telesna teža")
             elif self.itm.get() >= 18.5 and self.itm.get() <= 24.9:
@@ -71,7 +71,7 @@ class ITM():
                 self.stanje.set("prekomerna telesna teža")
             elif self.itm.get() >= 20:
                 self.stanje.set( "debelost")
-        elif self.a.get() == 2: # 2 so moški
+        elif self.a.get() == 2: #2 so moški
             if self.itm.get() <= 17.9:
                 self.stanje.set("prenizka telesna teža")
             elif self.itm.get() >= 18 and self.itm.get() <= 24.8:
